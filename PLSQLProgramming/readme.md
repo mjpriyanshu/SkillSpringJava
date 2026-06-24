@@ -1,23 +1,34 @@
 # PL/SQL 
 
 ## Step to run and Check the solution
-    go to `https://onecompiler.com/oracle` 
-    run the `tableQuery` then, `insertQuery.sql`.
-
-    after that run the file from folder `exercise1` and `exercise3`.
-
-    and finally 'verifyQuery.sql`.
-    This file also contain the code to run the procedure.
+    go to `https://onecompiler.com/oracle`.
 
 
-### Exercise 1:
-    This explains the use of control statement.
-    It's executed in block solution itself.
+## Exercise 1: Control Structures
+ ### Scenario 1: Senior Citizen Loan Discount
 
-### Exercise 3:
-    This explains the use of Procedures in PL/SQL.
-    Which need to be called.
-    So we have 'verifyQuery.sql' to run that.
+A PL/SQL block was created to loop through all customers and identify those older than 60 years. For eligible customers, a 1% reduction is applied to their loan interest rate.
+
+### Scenario 2: VIP Customer Promotion
+
+A PL/SQL block was written to iterate through customer records and mark customers as VIP if their account balance exceeds $10,000.
+
+### Scenario 3: Loan Due Reminders
+
+A PL/SQL block was developed to find loans that are due within the next 30 days and display reminder messages for the corresponding customers.
+
+## Exercise 2: Stored Procedures
+### Scenario 1: Process Monthly Interest
+
+A stored procedure named ProcessMonthlyInterest was created to automatically apply 1% monthly interest to all savings accounts and update their balances.
+
+### Scenario 2: Employee Bonus Update
+
+A stored procedure named UpdateEmployeeBonus was developed to increase employee salaries by a bonus percentage provided as a parameter for a specific department.
+
+### Scenario 3: Fund Transfer Between Accounts
+
+A stored procedure named TransferFunds was implemented to transfer money from one account to another. The procedure first checks whether the source account has sufficient funds before performing the transfer.
 
 <br>
 <br>
