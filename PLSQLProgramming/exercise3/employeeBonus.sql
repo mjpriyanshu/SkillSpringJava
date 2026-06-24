@@ -1,16 +1,17 @@
--- PROCEDURE 2: Employee Bonus
-
 CREATE OR REPLACE PROCEDURE UpdateEmployeeBonus(
-    p_dept_id IN NUMBER,
-    p_bonus_pct IN NUMBER
-) IS
+    p_DepartmentID IN NUMBER,
+    p_BonusPercent IN NUMBER
+)
+AS
 BEGIN
-    DBMS_OUTPUT.PUT_LINE('Procedure 2: Employee Bonus');
-    UPDATE employees 
-    SET salary = salary * (1 + p_bonus_pct/100) 
-    WHERE department_id = p_dept_id;
+
+    UPDATE Employees
+    SET Salary = Salary + (Salary * p_BonusPercent / 100)
+    WHERE DepartmentID = p_DepartmentID;
+
     COMMIT;
-    DBMS_OUTPUT.PUT_LINE('Bonus applied. Employees updated: ' || SQL%ROWCOUNT);
-    DBMS_OUTPUT.PUT_LINE(CHR(10));  -- Blank line after procedure
+
 END;
 /
+
+EXEC UpdateEmployeeBonus(101,10);

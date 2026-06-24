@@ -1,11 +1,15 @@
--- PROCEDURE 1: Monthly Interest
-
-CREATE OR REPLACE PROCEDURE ProcessMonthlyInterest IS
+CREATE OR REPLACE PROCEDURE ProcessMonthlyInterest
+AS
 BEGIN
-    DBMS_OUTPUT.PUT_LINE('Procedure 1: Monthly Interest');
-    UPDATE accounts SET balance = balance * 1.01 WHERE account_type = 'SAVINGS';
+
+    UPDATE Accounts
+    SET Balance = Balance + (Balance * 0.01)
+    WHERE AccountType = 'Savings';
+
     COMMIT;
-    DBMS_OUTPUT.PUT_LINE('Interest applied to all savings accounts.');
-    DBMS_OUTPUT.PUT_LINE(CHR(10));  -- Blank line after procedure
+
 END;
 /
+
+
+EXEC ProcessMonthlyInterest;
